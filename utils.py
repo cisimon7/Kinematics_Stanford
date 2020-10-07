@@ -92,8 +92,8 @@ def Rxd(q):
     # assert type(q) == Symbol
     return Matrix(
         [[0, 0, 0, 0],
+         [0, -sin(q), -cos(q), 0],
          [0, cos(q), -sin(q), 0],
-         [0, sin(q), cos(q), 0],
          [0, 0, 0, 0]]
     )
 
@@ -101,9 +101,9 @@ def Rxd(q):
 def Ryd(q):
     # assert type(q) == Symbol
     return Matrix(
-        [[cos(q), 0, sin(q), 0],
+        [[-sin(q), 0, cos(q), 0],
          [0, 0, 0, 0],
-         [-sin(q), 0, cos(q), 0],
+         [-cos(q), 0, -sin(q), 0],
          [0, 0, 0, 0]]
     )
 
@@ -111,8 +111,8 @@ def Ryd(q):
 def Rzd(q):
     # assert type(q) == Symbol
     return Matrix(
-        [[cos(q), -sin(q), 0, 0],
-         [sin(q), cos(q), 0, 0],
+        [[-sin(q), -cos(q), 0, 0],
+         [cos(q), -sin(q), 0, 0],
          [0, 0, 0, 0],
          [0, 0, 0, 0]]
     )
